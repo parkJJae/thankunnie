@@ -157,6 +157,36 @@ SELECT SHOP_ID FROM SHOP WHERE SHOP_ID = ? FOR UPDATE
 | **관리자 · 매장 가입 신청** | |
 | <img src="docs/images/readme/admin-applications.jpg" alt="관리자 매장 가입 신청 화면"> | |
 
+### 6. 그 밖에 맡은 일 (PR 52건 정리)
+
+**성능**
+- 빈자리 탐색의 N+1 제거 — 매장·날짜·소요 시간 조합마다 SQL 3개씩 나가던 조회를 묶어 **조회 기간과 상관없이 요청당 4개 이하**로 고정. Hibernate 통계로 쿼리 수를 세는 테스트를 같이 넣음 ([#184](https://github.com/ironhamlab/thankunnie/pull/184))
+- 매장·시술 이미지 1년 캐시 — 업로드마다 파일명이 새 UUID라 같은 주소의 내용이 바뀌지 않는 점을 이용 ([#183](https://github.com/ironhamlab/thankunnie/pull/183))
+- 매장 센터 메뉴 이동 체감 속도 개선 — 다시 받는 동안 기존 내용을 보여 주고, 계정을 바꾸면 늦게 온 이전 계정 응답을 버림 ([#193](https://github.com/ironhamlab/thankunnie/pull/193))
+
+**빈자리를 "실시간에 가깝게" 보여 주기**
+- 임박 카드와 예약 가능 시간 5초 자동 갱신. 내용이 같으면 다시 그리지 않아 깜빡임과 자동 넘김 끊김을 막음 ([#201](https://github.com/ironhamlab/thankunnie/pull/201))
+- 다른 고객이 결제 중인 카드는 "다른 분이 결제 중"으로 남기고, 결제가 확정됐을 때만 마감 안내 ([#203](https://github.com/ironhamlab/thankunnie/pull/203), [#206](https://github.com/ironhamlab/thankunnie/pull/206))
+- 매장이 영업시간 밖으로 연 시간에 "연장" 표시 — 가능 시간 응답에 `extendedStartTimes` 추가 ([#131](https://github.com/ironhamlab/thankunnie/pull/131), [#132](https://github.com/ironhamlab/thankunnie/pull/132))
+- 메인 빈자리 현황 30초 갱신과 바뀐 숫자만 굴러가는 효과, 임박 카드 마감 타이머 ([#138](https://github.com/ironhamlab/thankunnie/pull/138), [#173](https://github.com/ironhamlab/thankunnie/pull/173))
+
+**고객·매장 화면**
+- 매장 예약 관리 화면과 API — 기간·상태별 예약 현황, 표 정렬, 상세 창 ([#36](https://github.com/ironhamlab/thankunnie/pull/36), [#65](https://github.com/ironhamlab/thankunnie/pull/65), [#127](https://github.com/ironhamlab/thankunnie/pull/127), [#165](https://github.com/ironhamlab/thankunnie/pull/165))
+- 고객센터 자주 묻는 질문(고객용·매장용)과 카카오톡 문의, 이용약관·개인정보처리방침 ([#151](https://github.com/ironhamlab/thankunnie/pull/151), [#157](https://github.com/ironhamlab/thankunnie/pull/157))
+- 초보 시술 시작일 표시와 매장 예약하기에 모든 시술 노출 ([#223](https://github.com/ironhamlab/thankunnie/pull/223))
+
+**프로젝트 기반**
+- 백엔드 초기 세팅, 스키마 DDL과 H2 자동 스키마 생성 ([#10](https://github.com/ironhamlab/thankunnie/pull/10), [#21](https://github.com/ironhamlab/thankunnie/pull/21))
+- 로그인 기능 전에 팀이 바로 개발할 수 있게 테스트 사용자 인증 stub과 개발용 계정 전환 스위치 ([#15](https://github.com/ironhamlab/thankunnie/pull/15), [#49](https://github.com/ironhamlab/thankunnie/pull/49), [#54](https://github.com/ironhamlab/thankunnie/pull/54))
+- 로컬·시연용 매장·예약 데이터 ([#35](https://github.com/ironhamlab/thankunnie/pull/35), [#124](https://github.com/ironhamlab/thankunnie/pull/124))
+
+<p align="center"><img src="docs/images/readme/extended-hours.jpg" width="820" alt="연장 영업 시간 표시"></p>
+<p align="center">매장이 평소 영업시간(10:00 – 20:00) 밖으로 연 시간에 "연장" 표시</p>
+
+| 자주 묻는 질문 (고객용) | 이용약관 |
+|:---:|:---:|
+| <img src="docs/images/readme/faq.jpg" alt="자주 묻는 질문 창"> | <img src="docs/images/readme/terms.jpg" alt="이용약관 창"> |
+
 ## 팀 구성
 
 | 그룹 | 담당 | 영역 |
