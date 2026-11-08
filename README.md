@@ -8,8 +8,15 @@
 ![React](https://img.shields.io/badge/React-19-61DAFB)
 ![Oracle](https://img.shields.io/badge/Oracle-XE%2021-F80000)
 
-LG CNS U-CAMP SW 개발자 과정 41기(2026.09.01 – 11.06) 최종 팀 프로젝트 · 개발 2026.10.20 – 11.06 (3주) · 풀스택 6인
-원본 저장소: [ironhamlab/thankunnie](https://github.com/ironhamlab/thankunnie) · 이 저장소는 백엔드 파트장 **박재현**의 포크입니다.
+| | |
+|---|---|
+| 과정 | LG CNS U-CAMP SW 개발자 과정 41기 (2026.09.01 – 11.06) 최종 팀 프로젝트 |
+| 개발 기간 | 2026.10.20 – 11.06 (3주) |
+| 인원 | 풀스택 6인 |
+| 서비스 | [thankunnie.shop](https://thankunnie.shop) (테스트 결제 환경) |
+| 원본 저장소 | [ironhamlab/thankunnie](https://github.com/ironhamlab/thankunnie) |
+
+> 이 저장소는 백엔드 파트장 **박재현**의 포크입니다. 화면은 2026-11-09 배포 사이트에서 캡처했습니다.
 
 <p align="center"><img src="docs/images/readme/home.jpg" width="820" alt="땡잡은 언니 홈 화면"></p>
 
@@ -34,13 +41,26 @@ LG CNS U-CAMP SW 개발자 과정 41기(2026.09.01 – 11.06) 최종 팀 프로�
 
 ## 화면
 
-| 홈 — 다음으로 빠른 빈자리 · 실시간 지도 | 일반 예약하기 — 매장 목록 + 지도 |
-|---|---|
-| <img src="docs/images/readme/home.jpg" alt="홈"> | <img src="docs/images/readme/list.jpg" alt="빈자리 목록"> |
-| **매장 상세 — 날짜·시간 선택, 예약 요약** | **타임세일 — 할인율이 큰 임박 빈자리** |
-| <img src="docs/images/readme/shop-detail.jpg" alt="매장 상세"> | <img src="docs/images/readme/timesale.jpg" alt="타임세일"> |
-| **초보 시술 모집 — 모델 할인 시술** | **휴대폰 홈** |
-| <img src="docs/images/readme/model.jpg" alt="초보 시술 모집"> | <img src="docs/images/readme/home-mobile.jpg" width="260" alt="휴대폰 홈"> |
+### 웹
+
+| 일반 예약하기 — 시간 보기를 펼치면 가까운 두 날짜의 시작 시각 | 매장 상세 — 날짜·시간 선택과 예약 요약 |
+|:---:|:---:|
+| <img src="docs/images/readme/list.jpg" alt="빈자리 목록에서 시간 보기를 펼친 화면"> | <img src="docs/images/readme/shop-detail.jpg" alt="매장 상세 예약 화면"> |
+| **지도로 빈자리 찾기 — 지도를 옮기면 그 지역을 다시 검색** | **거리순 — 내 위치에서 가까운 매장부터** |
+| <img src="docs/images/readme/map.jpg" alt="지도 화면"> | <img src="docs/images/readme/nearest.jpg" alt="거리순 정렬"> |
+| **초보 시술 모집 — 모델 할인 시술만 모아 보기** | |
+| <img src="docs/images/readme/model.jpg" alt="초보 시술 모집"> | |
+
+### 휴대폰
+
+<p align="center">
+  <img src="docs/images/readme/mobile-home.jpg" width="240" alt="휴대폰 홈">
+  &nbsp;
+  <img src="docs/images/readme/mobile-list.jpg" width="240" alt="휴대폰 빈자리 목록">
+  &nbsp;
+  <img src="docs/images/readme/mobile-detail.jpg" width="240" alt="휴대폰 매장 상세">
+</p>
+<p align="center">홈 · 빈자리 목록과 지도 · 매장 상세</p>
 
 ## 주요 기능과 정책
 
