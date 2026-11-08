@@ -85,25 +85,10 @@
 
 ## 아키텍처
 
-```mermaid
-flowchart LR
-    U[사용자 브라우저] -->|HTTPS| N
+<img width="446" height="225" alt="image" src="https://github.com/user-attachments/assets/61cec9a1-10e1-4305-8761-3f8eb172bfa6" />
+<br>
+<br>
 
-    subgraph EC2["AWS EC2 · Docker Compose"]
-        N["Nginx<br/>React 19 정적 파일 · /api 프록시"] --> S["Spring Boot 3.5<br/>Java 21"]
-        S --> O[("Oracle XE 21")]
-    end
-
-    S --> S3[(S3<br/>매장 이미지)]
-    S --> PG[포트원<br/>예약금 결제]
-    S --> SMS[솔라피<br/>문자 알림]
-    N -.-> K[카카오맵 SDK]
-
-    subgraph CD["GitHub Actions"]
-        C1[CI: PR 빌드·테스트] --> C2[바뀐 경로만 이미지 빌드] --> C3[GHCR] --> C4["SSH 배포 · 자동 검증<br/>실패 시 이전 이미지 롤백"]
-    end
-    C4 --> EC2
-```
 
 | 영역 | 스택 |
 |---|---|
