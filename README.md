@@ -175,6 +175,7 @@ SELECT SHOP_ID FROM SHOP WHERE SHOP_ID = ? FOR UPDATE
 - 매장 예약 관리 화면과 API — 기간·상태별 예약 현황, 표 정렬, 상세 창 ([#36](https://github.com/ironhamlab/thankunnie/pull/36), [#65](https://github.com/ironhamlab/thankunnie/pull/65), [#127](https://github.com/ironhamlab/thankunnie/pull/127), [#165](https://github.com/ironhamlab/thankunnie/pull/165))
 - 고객센터 자주 묻는 질문(고객용·매장용)과 카카오톡 문의, 이용약관·개인정보처리방침 ([#151](https://github.com/ironhamlab/thankunnie/pull/151), [#157](https://github.com/ironhamlab/thankunnie/pull/157))
 - 초보 시술 시작일 표시와 매장 예약하기에 모든 시술 노출 ([#223](https://github.com/ironhamlab/thankunnie/pull/223))
+- 그 밖의 다듬기 — 같은 종류 열기·닫기 일정의 시간 겹침 차단, 매장 센터·메뉴 화면 효과, 공용 창 닫기 버튼 고정, 줄바꿈·표 가로 스크롤·분야 탭 스크롤 수정 ([#106](https://github.com/ironhamlab/thankunnie/pull/106), [#130](https://github.com/ironhamlab/thankunnie/pull/130), [#152](https://github.com/ironhamlab/thankunnie/pull/152), [#176](https://github.com/ironhamlab/thankunnie/pull/176), [#189](https://github.com/ironhamlab/thankunnie/pull/189), [#191](https://github.com/ironhamlab/thankunnie/pull/191), [#211](https://github.com/ironhamlab/thankunnie/pull/211))
 
 **프로젝트 기반**
 - 백엔드 초기 세팅, 스키마 DDL과 H2 자동 스키마 생성 ([#10](https://github.com/ironhamlab/thankunnie/pull/10), [#21](https://github.com/ironhamlab/thankunnie/pull/21))
