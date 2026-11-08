@@ -146,6 +146,7 @@ SELECT SHOP_ID FROM SHOP WHERE SHOP_ID = ? FOR UPDATE
 |---|---|---|
 | 매장 센터 · 빈자리 열기·닫기 | 시간대 열기·닫기 등록·수정·삭제, 예약과 겹치면 막기, 매장 잠금 | 날짜·시간 칸을 눌러 구간 선택, 날짜별 예약 가능 시간·예약 표시 |
 | 매장 센터 · 영업시간 | 요일별 영업시간 저장, 예약이 영업시간 밖으로 밀려나면 저장 거부 | 요일별 영업·휴무 선택, 주간 영업시간 한눈에 보기 |
+| 매장 센터 · 예약 관리 | 기간·상태별 매장 예약 조회, 매장 본인 예약만 조회 | 기간·상태 필터, 예약 목록 표와 옆 상세 창, 고객 방문 이력 연결 |
 | 관리자 · 매장 가입 신청 | 신청 조회·승인·거절, 결과 문자 안내 | 승인 대기·승인·거절 탭, 검색, 상세 보기 |
 | 고객 · 내 예약 | 역할별 예약 조회, 이용 완료·방문 안 함 등 표시 상태를 서버에서 계산 | 이용 예정·지난 이용·취소 탭, 매장 위치 지도가 있는 예약 상세 창 |
 
@@ -154,8 +155,8 @@ SELECT SHOP_ID FROM SHOP WHERE SHOP_ID = ? FOR UPDATE
 | <img src="docs/images/readme/owner-vacancy.jpg" alt="빈자리 열기·닫기 화면"> | <img src="docs/images/readme/owner-hours.jpg" alt="영업시간 화면"> |
 | **고객 · 내 예약** | **고객 · 예약 상세** |
 | <img src="docs/images/readme/my-reservations.jpg" alt="내 예약 화면"> | <img src="docs/images/readme/my-reservation-detail.jpg" alt="예약 상세 창"> |
-| **관리자 · 매장 가입 신청** | |
-| <img src="docs/images/readme/admin-applications.jpg" alt="관리자 매장 가입 신청 화면"> | |
+| **매장 센터 · 예약 관리** | **관리자 · 매장 가입 신청** |
+| <img src="docs/images/readme/owner-bookings.jpg" alt="매장 예약 관리 화면"> | <img src="docs/images/readme/admin-applications.jpg" alt="관리자 매장 가입 신청 화면"> |
 
 ### 6. 그 밖에 맡은 일 (PR 52건 정리)
 
